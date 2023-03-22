@@ -16,8 +16,10 @@ const card = useLoaderData()
 
   return (
     <div style={div}>
-      <h1>{card.subject}</h1>
-      <h2>{card.details}</h2>
+      <h1>{card.name}</h1>
+      <img src={card.img} alt="" />
+      <h2>{card.description}</h2>
+      <p>{card.address}</p>
       <Link to="/">
         <button>Go Back</button>
       </Link>
