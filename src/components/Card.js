@@ -13,10 +13,12 @@ const Card = ({ card }) => {
   }
   return (
     <div style={div}>
-      <Link to={`/post/${card.id}`}>
-        <h1>{card.subject}</h1>
+      <Link to={`/${card.id}`}>
+        <h1>Activity:{card.name}</h1>
       </Link>
-      <h2>{card.details}</h2>
+      <img src={card.img} className="recipe-image" alt="" />
+      <p>State: {card.state}</p>
+      <p>Activity Type: {card.activityType}</p>
     </div>
   )
 }
