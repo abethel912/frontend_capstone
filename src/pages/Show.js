@@ -1,4 +1,6 @@
 import { Link, useLoaderData } from 'react-router-dom'
+import Button from 'react-bootstrap/Button'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 // destructuring the props needed to get our post, including router prop match
 const Show = () => {
@@ -21,7 +23,7 @@ const card = useLoaderData()
       <h2>{card.description}</h2>
       <p>{card.address}</p>
       <Link to="/">
-        <button>Go Back</button>
+        <Button>Go Back</Button>
       </Link>
     </div>
   )
