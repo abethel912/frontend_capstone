@@ -14,7 +14,7 @@ const Card = ({ card }) => {
   return (
     <div style={div}>
       <Link to={`/${card.id}`}>
-        <h1>Activity:{card.name}</h1>
+        <h1>{card.name}</h1>
       </Link>
       <img src={card.img} className="recipe-image" alt="" />
       <p>State: {card.state}</p>
