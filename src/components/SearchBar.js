@@ -1,10 +1,10 @@
 import React from 'react'
 
-function SearchBar({placeHolder, data}) {
+function SearchBar({placeholder, data}) {
   return (
     <div className='search'>
       <div className='searchInputs'></div>
-      <input type='text' />
+      <input type='text' placeholder={placeholder} />
       <div className='searchIcon'></div>
       <div className='dataResult'></div>
       Searchbar

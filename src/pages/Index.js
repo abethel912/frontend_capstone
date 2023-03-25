@@ -14,7 +14,7 @@ const Index = (props) => {
       <Navigation />
       <h1>NE Getaway</h1>
       <div style={{ textAlign: 'center' }}>
-        <SearchBar />
+        <SearchBar placeholder="keyword" />
         <h2>Create a Activity</h2>
         <Form action="/create" method="post">
           <input type="text" name="name" placeholder="activity" />
