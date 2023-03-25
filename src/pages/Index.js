@@ -2,6 +2,7 @@ import Card from '../components/Card'
 import { useLoaderData } from 'react-router-dom'
 import { Form } from 'react-router-dom'
 import Navigation from '../components/Navigation'
+import SearchBar from '../components/SearchBar'
 import 'bootstrap'
 import '../App.css'
 
@@ -13,6 +14,7 @@ const Index = (props) => {
       <Navigation />
       <h1>NE Getaway</h1>
       <div style={{ textAlign: 'center' }}>
+        <SearchBar />
         <h2>Create a Activity</h2>
         <Form action="/create" method="post">
           <input type="text" name="name" placeholder="activity" />
