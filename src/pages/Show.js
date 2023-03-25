@@ -17,14 +17,16 @@ const card = useLoaderData()
   }
 
   return (
-    <div style={div}>
+    <div style={{ textAlign: 'center' }}>
       <h1>{card.name}</h1>
       <img src={card.img} alt="" />
       <p>{card.description}</p>
       <p>{card.address}</p>
-      <Link to="/">
-        <Button>Go Back</Button>
-      </Link>
+      <div style={div}>
+        <Link to="/">
+          <Button>Go Back</Button>
+        </Link>
+      </div>
     </div>
   )
 }
