@@ -5,11 +5,9 @@ import Navigation from '../components/Navigation'
 import 'bootstrap'
 import '../App.css'
 
-
-
 const Index = (props) => {
   const activities = useLoaderData()
-  
+
   return (
     <>
       <Navigation />
@@ -39,4 +37,3 @@ const Index = (props) => {
 }
 
 export default Index
-
