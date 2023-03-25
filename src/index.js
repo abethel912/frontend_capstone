@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import './index.css'
+import './custom.scss'
 import reportWebVitals from './reportWebVitals'
 import 'bootstrap'
 import { RouterProvider } from 'react-router-dom'

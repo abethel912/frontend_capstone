@@ -10,7 +10,6 @@ const Index = (props) => {
   return (
     <>
       <Navigation />
-
       {activities.map((card) => (
         <Card card={card} key={card.id} />
       ))}
