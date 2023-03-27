@@ -56,3 +56,47 @@ export const deleteAction = async ({ params }) => {
   return redirect('/')
 }
 
+export const loginAction = async ({ request }) => {
+  const formData = await request.formData()
+  const User = {
+    username: formData.get('username'),
+    password: formData.get('password')
+  }
+  fetch(URL + '/auth/login', {
+    method: 'post',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(User)
+  })
+    .then((response) => response.json())
+    //username and token are bundled together
+    .then((data) => localStorage.setItem('token', JSON.stringify(data)))
+  return redirect('/')
+}
+
+export const logoutAction = async () => {
+  localStorage.setItem(
+    'token',
+    JSON.stringify({ token: null, username: 'Adventurer123' })
+  )
+  console.log('Logout~!')
+  return redirect('/')
+}
+
+export const registerAction = async ({ request }) => {
+  const formData = await request.formData()
+  const newUser = {
+    username: formData.get('username'),
+    password: formData.get('password')
+  }
+  fetch(URL + '/auth/signup', {
+    method: 'post',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(newUser)
+  })
+  return redirect('/')
+}
+

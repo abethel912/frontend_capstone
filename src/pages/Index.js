@@ -5,6 +5,9 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 
 const Index = (props) => {
+
+  
+
   const activities = useLoaderData()
 
   return (
