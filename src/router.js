@@ -3,9 +3,14 @@ import App from './App'
 import Index from './pages/Index'
 import Show from './pages/Show'
 import Create from './pages/Create'
+// import Login from './pages/Login'
 // import Navigation from '../src/components/Navigation'
 import { indexLoader, showLoader } from './loaders'
-import { createAction, updateAction, deleteAction } from './actions'
+import {
+  createAction,
+  updateAction,
+  deleteAction,
+} from './actions'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -16,6 +21,7 @@ const router = createBrowserRouter(
         <Route path="create" element={<Create />} action={createAction} />
         <Route path="update/:id" action={updateAction} />
         <Route path="delete/:id" action={deleteAction} />
+        {/* <Route path="login" element={<Login />} action={loginAction} /> */}
       </Route>
     </>
   )
