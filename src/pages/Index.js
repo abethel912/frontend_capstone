@@ -21,12 +21,7 @@ const Index = (props) => {
         <input type="text" name="name" placeholder="activity" />
         <input type="text" name="img" placeholder="URL here" />
         <input type="text" alt="" name="state" placeholder="state" />
-        <input
-          type="text"
-          alt=""
-          name="activityType"
-          placeholder="activity type"
-        />
+        <input type="text" alt="" name="activityType" placeholder="activity type" />
         <input type="text" name="description" placeholder="description" />
         <input type="text" alt="" name="address" placeholder="address" />
         <button>Create New Activity</button>
