@@ -8,7 +8,6 @@ import {
   MDBNavbarNav,
   MDBNavbarItem,
   MDBNavbarLink,
-  MDBBtn,
   MDBDropdown,
   MDBDropdownToggle,
   MDBDropdownMenu,
@@ -53,9 +52,8 @@ function Navigation() {
                   Dropdown
                 </MDBDropdownToggle>
                 <MDBDropdownMenu>
+                  <MDBDropdownItem link href="about">About NE Getaway</MDBDropdownItem>
                   <MDBDropdownItem link href="create">Add Activity</MDBDropdownItem>
-                  <MDBDropdownItem link href="update/:id">Edit Activity</MDBDropdownItem>
-                  <MDBDropdownItem link href="delete/:id">Delete Activity</MDBDropdownItem>
                 </MDBDropdownMenu>
               </MDBDropdown>
             </MDBNavbarItem>
@@ -70,15 +68,6 @@ function Navigation() {
             </MDBNavbarItem>
           </MDBNavbarNav>
 
-          <form className="d-flex input-group w-auto">
-            <input
-              type="search"
-              className="form-control"
-              placeholder="Type query"
-              aria-label="Search"
-            />
-            <MDBBtn color="primary">Search</MDBBtn>
-          </form>
         </MDBCollapse>
       </MDBContainer>
     </MDBNavbar>

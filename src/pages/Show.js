@@ -13,21 +13,30 @@ const card = useLoaderData()
     textAlign: 'center',
     border: '5px solid',
     width: '100%',
-    margin: '30px auto'
+    margin: '45px auto'
   }
 
   return (
     <div style={{ textAlign: 'center' }}>
       <h1>{card.name}</h1>
-      <img src={card.img} alt="" />
-      <p>{card.description}</p>
-      <p>{card.address}</p>
+      <div style={div}>
+        <img src={card.img} alt="" />
+        <p>{card.activityType}</p>
+        <p>{card.state}</p>
+        <p>{card.description}</p>
+        <p>{card.address}</p>
+      </div>
       <Form action={`/update/${card.id}`} method="post">
         <input
           type="text"
           name="name"
-          placeholder="recipe"
+          placeholder="activity"
           defaultValue={card.name}
+        />
+        <img
+          class="rounded-circle shadow-4-strong"
+          alt="avatar2"
+          src="image.png"
         />
         <input
           type="text"
@@ -37,38 +46,38 @@ const card = useLoaderData()
         />
         <input
           type="text"
-          name="cuisine"
-          placeholder="cuisine"
-          defaultValue={card.cuisine}
+          name="activityType"
+          placeholder="activityType"
+          defaultValue={card.activityType}
         />
         <input
           type="text"
-          name="ingredients"
-          placeholder="ingredients"
-          defaultValue={card.ingredients}
+          name="state"
+          placeholder="state"
+          defaultValue={card.state}
         />
         <input
           type="text"
-          name="directions"
-          placeholder="directions"
-          defaultValue={card.directions}
+          name="description"
+          placeholder="description"
+          defaultValue={card.description}
         />
         <input
           type="text"
-          name="time"
-          placeholder="time"
-          defaultValue={card.time}
+          name="address"
+          placeholder="address"
+          defaultValue={card.address}
         />
-        <button>Update Recipe</button>
+        <button>Update Activity</button>
       </Form>
+      <br></br>
       <Form action={`/delete/${card.id}`} method="post">
-        <button>Delete Recipe</button>
+        <button>Delete Activity</button>
       </Form>
-      <div style={div}>
-        <Link to="/">
-          <Button>Go Back</Button>
-        </Link>
-      </div>
+      <br></br>
+      <Link to="/">
+        <Button>Go Back</Button>
+      </Link>
     </div>
   )
 }
