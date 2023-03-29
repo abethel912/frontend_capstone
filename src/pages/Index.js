@@ -1,6 +1,7 @@
 import Card from '../components/Card'
 import { useLoaderData, Form } from 'react-router-dom'
 import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 
@@ -30,6 +31,7 @@ const Index = (props) => {
         <input type="text" alt="" name="address" placeholder="address" />
         <button>Create New Activity</button>
       </Form>
+      <Footer />
     </>
   )
 }
