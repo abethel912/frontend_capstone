@@ -5,6 +5,7 @@ import Footer from '../components/Footer'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 
+
 const Index = (props) => {
 
   
@@ -17,6 +18,7 @@ const Index = (props) => {
       {activities.map((card) => (
         <Card card={card} key={card.id} />
       ))}
+      
       <Form action="/create" method="post">
         <input type="text" name="name" placeholder="activity" />
         <input type="text" name="img" placeholder="URL here" />
